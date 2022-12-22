@@ -1,11 +1,17 @@
+import MainScreen from "../components/MainScreen";
+import {useState} from "react";
+
 export default function Home({}) {
-  return (
-    <div>
-      <div className="bg-green-900 h-screen">
+    const [totalOfBlocks, setTotalOfBlocks] = useState(0);
+    const [statusMatch, setStatusMatch] = useState("default");
+
+    return (
         <div>
-          <div className="transition-transform duration-1000"></div>
+            <div className="h-screen">
+                <div>
+                    <MainScreen setTotalOfBlocks={setTotalOfBlocks}/>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 }
