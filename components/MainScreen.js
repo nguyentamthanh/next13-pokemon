@@ -1,6 +1,7 @@
-function MainScreen({setTotalOfBlocks}) {
+function MainScreen({setTotalOfBlocks, setStatusMatch}) {
     function onStart(item) {
         setTotalOfBlocks(item)
+        setStatusMatch("match")
     }
 
     return (
